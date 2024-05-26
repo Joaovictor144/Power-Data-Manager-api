@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Cliente {
+  id      Int      @id @default(autoincrement())
+  numeroCliente     String   
+  numeroInstalacao  String
+  nome              String
+  faturas Fatura[]
+
+  @@unique([numeroCliente, numeroInstalacao])
+  @@map("cliente")
+}
+
+model Fatura {
+  id                              Int      @id @default(autoincrement())
+  numeroCliente                   String   @map("numero_cliente")
+  numeroInstalacao                String   @map("numero_instalacao")
+  mesReferencia                   DateTime @map("mes_referencia")
+  energiaEletricaKwh              Float    @map("energia_eletrica_kwh")
+  energiaEletricaValor            Float    @map("energia_eletrica_valor")
+  energiaSCEEEKwh                 Float    @map("energia_sceee_kwh")
+  energiaSCEEEValor               Float    @map("energia_sceee_valor")
+  energiaCompensadaGDIKwh         Float    @map("energia_compensada_gd_i_kwh")
+  energiaCompensadaGDIValor       Float    @map("energia_compensada_gd_i_valor")
+  contribIlumPublicaMunicipalValor Float   @map("contrib_ilum_publica_municipal_valor")
+  valorFatura                     Float    @map("valor_fatura")
+  cliente                         Cliente  @relation(fields: [numeroCliente, numeroInstalacao], references: [numeroCliente, numeroInstalacao])
+
+  @@index([numeroCliente])
+  @@index([numeroInstalacao])
+  @@index([mesReferencia])
+  @@map("fatura")
+}
