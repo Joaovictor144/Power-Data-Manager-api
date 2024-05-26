@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  database:
+    image: postgres
+    container_name: power_data_manager
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=powerdatamanager
