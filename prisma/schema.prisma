@@ -28,7 +28,7 @@ model Fatura {
   id                              Int      @id @default(autoincrement())
   numeroCliente                   String   @map("numero_cliente")
   numeroInstalacao                String   @map("numero_instalacao")
-  mesReferencia                   DateTime @map("mes_referencia")
+  mesReferencia                   String   @map("mes_referencia")
   energiaEletricaKwh              Float    @map("energia_eletrica_kwh")
   energiaEletricaValor            Float    @map("energia_eletrica_valor")
   energiaSCEEEKwh                 Float    @map("energia_sceee_kwh")
@@ -37,6 +37,7 @@ model Fatura {
   energiaCompensadaGDIValor       Float    @map("energia_compensada_gd_i_valor")
   contribIlumPublicaMunicipalValor Float   @map("contrib_ilum_publica_municipal_valor")
   valorFatura                     Float    @map("valor_fatura")
+  urlImage                        String   @map("url_image")
   cliente                         Cliente  @relation(fields: [numeroCliente, numeroInstalacao], references: [numeroCliente, numeroInstalacao])
 
   @@index([numeroCliente])
