@@ -16,8 +16,7 @@
     },
     "outDir": "build",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,      
+    "forceConsistentCasingInFileNames": true,   
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true

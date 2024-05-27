@@ -8,7 +8,6 @@ class UploadPdfUseCase {
     try {
       const data = await this.pdfToObject(file)
       
-
       const customer = await UploadPdfRepository.verifyCustomerToUpload({ numeroCliente: data.numeroCliente, numeroInstalacao: data.numeroInstalacao })
       if(!customer){
         await UploadPdfRepository.createCustomer({

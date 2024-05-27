@@ -5,6 +5,7 @@ declare global {
       SECRET_KEY: string;
       PORT: number;
       NODE_ENV: string;
+      API_KEY: string;
     }
   }
 }
