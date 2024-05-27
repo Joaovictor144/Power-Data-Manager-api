@@ -14,8 +14,6 @@ server.use(cors({
   origin: "*", 
 }));
 
-server.use(routes)
-
 server.use(
   (error: Error, request: Request, response: Response, next: NextFunction)=>{
     return response.status(400).json({
@@ -24,6 +22,8 @@ server.use(
     })
   }
 )
+
+server.use(routes)
 
 
 export {server}
