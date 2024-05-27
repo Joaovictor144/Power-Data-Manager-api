@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsx watch src/app.ts",
-    "build": "tsup src",
+    "build": "yarn tsup src",
     "start": "node dist/app.js"
   },
   "dependencies": {
