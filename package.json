@@ -9,7 +9,10 @@
     "dev": "tsx watch src/app.ts",
     "build": "tsup src",
     "start": "node dist/app.js",
-    "test": "set NODE_ENV=test&&jest --runInBand --detectOpenHandles --testTimeout=10000"
+    "test": "set NODE_ENV=test&&jest --runInBand --detectOpenHandles --testTimeout=10000",
+    "migrations": "prisma migrate dev",
+    "docker": "docker-compose up -d",
+    "setup": "npm install && npm run docker && npm run migrations"
   },
   "dependencies": {
     "@prisma/client": "5.14.0",
