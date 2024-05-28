@@ -1,5 +1,3 @@
-import { basedir } from "@/utils/basedir";
-import path from "path";
 import { Cliente, Fatura, PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
