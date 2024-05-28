@@ -34,6 +34,7 @@
     "@types/node": "^20.12.12",
     "@types/pdf-parse": "^1.1.4",
     "ts-jest": "^29.1.3",
+    "ts-node": "^10.9.2",
     "tscpaths": "^0.0.9",
     "tsup": "^8.0.2",
     "tsx": "^4.11.0",

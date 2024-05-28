@@ -20,6 +20,6 @@
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "resolveJsonModule": true,
+    "resolveJsonModule": true
   }
 }

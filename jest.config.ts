@@ -4,7 +4,7 @@ import { compilerOptions } from './tsconfig.json';
 
 export default {
     clearMocks: true,
-    collectCoverage: true,
+    collectCoverage: false,
     collectCoverageFrom: ['<rootDir>/src/modules/**/useCases/**/*.ts'],
     coverageDirectory: 'coverage',
     coverageReporters: ['text-summary', 'lcov'],
@@ -14,5 +14,6 @@ export default {
     }),
     preset: 'ts-jest',
     testEnvironment: 'node',
-    testMatch: ['**/*.spec.ts'],
+    testMatch: ['**/*.test.ts'],
+    // testPathIgnorePatterns: [/node_modules/]
 };
