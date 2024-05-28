@@ -11,7 +11,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@infra/*": ["./src/infra/*"],
-      "@module/*": ["./src/module/*"],
+      "@modules/*": ["./src/modules/*"],
       "@utils/*": ["./src/utils/*"]
     },
     "outDir": "build",

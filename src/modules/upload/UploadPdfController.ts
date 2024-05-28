@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import UploadPdfUseCase from "@/modules/upload/UploadPdfUseCase";
+import UploadPdfUseCase from "@modules/upload/UploadPdfUseCase";
 
 class UploadPdfController {
   async handle(request: Request, response: Response) {

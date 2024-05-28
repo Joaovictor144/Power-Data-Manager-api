@@ -1,5 +1,5 @@
 import { fileUpload } from "@/infra/middleware/uploadFile";
-import UploadPdfController from "@/modules/upload/UploadPdfController";
+import UploadPdfController from "@modules/upload/UploadPdfController";
 import { Router } from "express";
 
 const fileRoutes = Router();

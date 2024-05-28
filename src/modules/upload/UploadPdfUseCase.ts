@@ -1,6 +1,6 @@
 import pdfParse from 'pdf-parse';
 import { promises as fs } from 'fs';
-import UploadPdfRepository from '@/modules/upload/UploadPdfRepository';
+import UploadPdfRepository from '@modules/upload/UploadPdfRepository';
 import urlImage from '@/shared/urlImage';
 
 class UploadPdfUseCase {
