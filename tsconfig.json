@@ -5,20 +5,21 @@
       "ESNext"
     ],                                       
     "module": "commonjs",
-    "rootDir": "./src",
+    "rootDir": "./",
     "moduleResolution": "node",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["./src/*"],
-      "@infra/*": ["./src/infra/*"],
-      "@modules/*": ["./src/modules/*"],
-      "@utils/*": ["./src/utils/*"]
+      "@/*": ["*"],
+      "@infra/*": ["infra/*"],
+      "@modules/*": ["modules/*"],
+      "@utils/*": ["utils/*"]
     },
     "outDir": "build",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,   
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "resolveJsonModule": true,
   }
 }
